@@ -4,14 +4,10 @@ import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-   base: '/bolt/',
   plugins: [react()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-  },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
   },
 });
